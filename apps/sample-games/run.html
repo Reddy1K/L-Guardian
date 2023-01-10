@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Classroom</title>
+		<link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
+		<script src="../../css/css.js"></script>
+		<link href="../../css/ui.css" rel="stylesheet" />
+		<style>
+			iframe{
+				width: 99vw;
+				height: 99vh;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 id="info"></h2>
+		<div id="gamewrap">
+			
+		</div>
+		<script>
+			const resources = [
+				"https://cattn.github.io/gba",
+				"https://cattn.github.io/games",
+				"https://brhhst.vercel.app",
+				"https://javascythe.github.io",
+				"https://gba-hst.vercel.app"
+			]
+			const urlq = new URLSearchParams(
+				(parent.document.getElementsByTagName("iframe")[0].src+"").split("?")[1]
+			);
+			const f = urlq.get("f");
+			const re_id = urlq.get("r");
+			const n = urlq.get("n");
+			window.onerror = function(message, source, lineno, colno, error) {
+				document.getElementById("info").innerHTML = `Critical Exception
+				${message} in ${source}`;
+			};
+			if(n==undefined||f==undefined||re_id==undefined){
+				document.getElementById("info").textContent = "missing id/title/resource_id";
+			} else {
+				document.getElementById("gamewrap").innerHTML = `<iframe src="${resources[re_id]+f}"></iframe>`;
+			}
+		</script>
+	</body>
+</html>

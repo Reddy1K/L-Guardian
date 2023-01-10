@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Classroom</title>
+		<link rel="icon" href="https://ssl.gstatic.com/classroom/favicon.png" />
+		<script src="../../css/css.js"></script>
+		<link href="../../css/ui.css" rel="stylesheet" />
+	</head>
+	<body>
+		<script>
+			window.select = function(rid, n, f){
+				var nrid = document.getElementById("sid"+rid).value;
+				goInternal(`%2Fapps%2Fsample-games%2Frun.html%3Fr%3D${nrid}%26n%3D${n}%26f%3D${f}`);
+				//          /apps/sample-games/run.html?r=2&n=doodle-jump&f=%2Fprojects%2Fdoodle-jump%2Findex.html
+			}
+		</script>
+		<h2>
+			games
+		</h2>
+		<p>
+			some games may have sound, make sure to adjust volume
+		</p>
+		<ul>
+			<li>HTML5/CANVAS GAMES</li>
+			<li>No alternate links for these (yet)</li>
+			<li>
+				<a href="run.html?r=1&n=Brick%20Breaker&f=/brick-breaker.html">Brick Breaker</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Flappy%20Birdr&f=/flappy_bird.html">Flappy Bird</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Janggir&f=/janggi.html">Janggi</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Maze&f=/maze.html">Maze</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Omok&f=/omok.html">Omok</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Stacked&f=/stack.html">Stacked</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Tetris&f=/tetris.html">Tetris</a>
+			</li>
+			<li>
+				<a href="run.html?r=1&n=Walls&f=/walls.html">Walls</a>
+			</li>
+			<li>ASSORTED GAMES</li>
+			<li><select id="sid1"><option value="2">*.vercel.app</option><option value="3">*.github.io</option></select></li>
+			<li><a href="javascript:select(1,'1','%2Fprojects%2F1%2Findex.html');">1</a></li>
+			<li><a href="javascript:select(1,'2048','%2Fprojects%2F2048%2Findex.html');">2048</a></li>
+			<li><a href="javascript:select(1,'9007199254740992','%2Fprojects%2F9007199254740992%2Findex.html');">9007199254740992</a></li>
+			<li><a href="javascript:select(1,'among-us','%2Fprojects%2Famong-us%2F');">among-us</a></li>
+			<li><a href="javascript:select(1,'basketball-stars','%2Fprojects%2Fbasketball-stars%2Findex.html');">basketball-stars</a></li>
+			<li><a href="javascript:select(1,'bitlife','%2Fprojects%2Fbitlife%2Findex.html');">bitlife</a></li>
+			<li><a href="javascript:select(1,'bloxors','%2Fprojects%2Fbloxors%2Findex.html');">bloxors</a></li>
+			<li><a href="javascript:select(1,'cannon-basketball-4','%2Fprojects%2Fcannon-basketball-4%2Findex.html');">cannon-basketball-4</a></li>
+			<li><a href="javascript:select(1,'chill-radio','%2Fprojects%2Fchill-radio%2Findex.html');">chill-radio</a></li>
+			<li><a href="javascript:select(1,'chrome-dino','%2Fprojects%2Fchrome-dino%2Findex.html');">chrome-dino</a></li>
+			<li><a href="javascript:select(1,'index.html','projects%2Fconnect3%2Findex.html');">index.html</a></li>
+			<li><a href="javascript:select(1,'cookie-clicker','%2Fprojects%2Fcookie-clicker%2Findex.html');">cookie-clicker</a></li>
+			<li><a href="javascript:select(1,'craftmine','%2Fprojects%2Fcraftmine%2Findex.html');">craftmine</a></li>
+			<li><a href="javascript:select(1,'csgo-clicker','%2Fprojects%2Fcsgo-clicker%2Findex.html');">csgo-clicker</a></li>
+			<li><a href="javascript:select(1,'ctr','%2Fprojects%2Fctr%2Findex.html');">ctr</a></li>
+			<li><a href="javascript:select(1,'ctr-holiday','%2Fprojects%2Fctr-holiday%2Findex.html');">ctr-holiday</a></li>
+			<li><a href="javascript:select(1,'ctr-tr','%2Fprojects%2Fctr-tr%2Findex.html');">ctr-tr</a></li>
+			<li><a href="javascript:select(1,'cubefield','%2Fprojects%2Fcubefield%2Findex.html');">cubefield</a></li>
+			<li><a href="javascript:select(1,'cupcake2048','%2Fprojects%2Fcupcake2048%2Findex.html');">cupcake2048</a></li>
+			<li><a href="javascript:select(1,'deal-or-no-deal','%2Fprojects%2Fdeal-or-no-deal%2Findex.html');">deal-or-no-deal</a></li>
+			<li><a href="javascript:select(1,'death-run-3d','%2Fprojects%2Fdeath-run-3d%2Findex.html');">death-run-3d</a></li>
+			<li><a href="javascript:select(1,'defend-the-tank','%2Fprojects%2Fdefend-the-tank%2Findex.html');">defend-the-tank</a></li>
+			<li><a href="javascript:select(1,'doge2048','%2Fprojects%2Fdoge2048%2Findex.html');">doge2048</a></li>
+			<li><a href="javascript:select(1,'DogeMiner','%2Fprojects%2FDogeMiner%2Findex.html');">DogeMiner</a></li>
+			<li><a href="javascript:select(1,'doodle-jump','%2Fprojects%2Fdoodle-jump%2Findex.html');">doodle-jump</a></li>
+			<li><a href="javascript:select(1,'draw-the-hill','%2Fprojects%2Fdraw-the-hill%2Findex.html');">draw-the-hill</a></li>
+			<li><a href="javascript:select(1,'ducklife3','%2Fprojects%2Fducklife3%2Findex.html');">ducklife3</a></li>
+			<li><a href="javascript:select(1,'ducklife4','%2Fprojects%2Fducklife4%2Findex.html');">ducklife4</a></li>
+			<li><a href="javascript:select(1,'edgenotfound','%2Fprojects%2Fedgenotfound%2Findex.html');">edgenotfound</a></li>
+			<li><a href="javascript:select(1,'evil-glitch','%2Fprojects%2Fevil-glitch%2Findex.html');">evil-glitch</a></li>
+			<li><a href="javascript:select(1,'exo','%2Fprojects%2Fexo%2Findex.html');">exo</a></li>
+			<li><a href="javascript:select(1,'factoryballs','%2Fprojects%2Ffactoryballs%2Findex.html');">factoryballs</a></li>
+			<li><a href="javascript:select(1,'fake-virus','%2Fprojects%2Ffake-virus%2Findex.html');">fake-virus</a></li>
+			<li><a href="javascript:select(1,'flappy-2048','%2Fprojects%2Fflappy-2048%2Findex.html');">flappy-2048</a></li>
+			<li><a href="javascript:select(1,'flappy-bird','%2Fprojects%2Fflappy-bird%2Findex.html');">flappy-bird</a></li>
+			<li><a href="javascript:select(1,'geodash','%2Fprojects%2Fgeodash%2Findex.html');">geodash</a></li>
+			<li><a href="javascript:select(1,'getaway-shootout','%2Fprojects%2Fgetaway-shootout%2Findex.html');">getaway-shootout</a></li>
+			<li><a href="javascript:select(1,'google-snake','%2Fprojects%2Fgoogle-snake%2Findex.html');">google-snake</a></li>
+			<li><a href="javascript:select(1,'hackertype','%2Fprojects%2Fhackertype%2Findex.html');">hackertype</a></li>
+			<li><a href="javascript:select(1,'HexGL','%2Fprojects%2FHexGL%2Findex.html');">HexGL</a></li>
+			<li><a href="javascript:select(1,'idle-breakout','%2Fprojects%2Fidle-breakout');">idle-breakout</a></li>
+			<li><a href="javascript:select(1,'idle-shark','%2Fprojects%2Fidle-shark%2F');">idle-shark</a></li>
+			<li><a href="javascript:select(1,'madalin-stunt-cars-2','%2Fprojects%2Fmadalin-stunt-cars-2%2Findex.html');">madalin-stunt-cars-2</a></li>
+			<li><a href="javascript:select(1,'madalin-stunt-cars-3','%2Fprojects%2Fmadalin-stunt-cars-3%2Findex.html');">madalin-stunt-cars-3</a></li>
+			<li><a href="javascript:select(1,'meme2048','%2Fprojects%2Fmeme2048%2Findex.html');">meme2048</a></li>
+			<li><a href="javascript:select(1,'mario','%2Fprojects%2Fmario%2Findex.html');">mario</a></li>
+			<li><a href="javascript:select(1,'minecraft-classic','%2Fprojects%2Fminecraft-classic%2Findex.html');">minecraft-classic</a></li>
+			<li><a href="javascript:select(1,'minesweeper','%2Fprojects%2Fminesweeper%2Findex.html');">minesweeper</a></li>
+			<li><a href="javascript:select(1,'missiles','%2Fprojects%2Fmissiles%2Findex.html');">missiles</a></li>
+			<li><a href="javascript:select(1,'motox3m','%2Fprojects%2Fmotox3m%2Findex.html');">motox3m</a></li>
+			<li><a href="javascript:select(1,'n-gon','%2Fprojects%2Fn-gon%2Findex.html');">n-gon</a></li>
+			<li><a href="javascript:select(1,'ninja','%2Fprojects%2Fninja%2Findex.html');">ninja</a></li>
+			<li><a href="javascript:select(1,'ns-shaft','%2Fprojects%2Fns-shaft%2Findex.html');">ns-shaft</a></li>
+			<li><a href="javascript:select(1,'paperio2','%2Fprojects%2Fpaperio2%2Findex.html');">paperio2</a></li>
+			<li><a href="javascript:select(1,'particle-clicker','%2Fprojects%2Fparticle-clicker%2Findex.html');">particle-clicker</a></li>
+			<li><a href="javascript:select(1,'polybranch','%2Fprojects%2Fpolybranch%2Findex.html');">polybranch</a></li>
+			<li><a href="javascript:select(1,'push-your-luck','%2Fprojects%2Fpush-your-luck%2Findex.html');">push-your-luck</a></li>
+			<li><a href="javascript:select(1,'retro-bowl','%2Fprojects%2Fretro-bowl%2Findex.html');">retro-bowl</a></li>
+			<li><a href="javascript:select(1,'rolly-vortex','%2Fprojects%2Frolly-vortex%2Findex.html');">rolly-vortex</a></li>
+			<li><a href="javascript:select(1,'rooftop-snipers','%2Fprojects%2Frooftop-snipers%2Findex.html');">rooftop-snipers</a></li>
+			<li><a href="javascript:select(1,'sand-game','%2Fprojects%2Fsand-game%2Findex.html');">sand-game</a></li>
+			<li><a href="javascript:select(1,'scrapmetal','%2Fprojects%2Fscrapmetal%2Findex.html');">scrapmetal</a></li>
+			<li><a href="javascript:select(1,'slope','%2Fprojects%2Fslope%2Findex.html');">slope</a></li>
+			<li><a href="javascript:select(1,'sm64','%2Fprojects%2Fsm64%2Findex.html');">sm64</a></li>
+			<li><a href="javascript:select(1,'snowbattle','%2Fprojects%2Fsnowbattle%2Findex.html');">snowbattle</a></li>
+			<li><a href="javascript:select(1,'soldier-legend','%2Fprojects%2Fsoldier-legend%2Findex.html');">soldier-legend</a></li>
+			<li><a href="javascript:select(1,'solitaire','%2Fprojects%2Fsolitaire%2Findex.html');">solitaire</a></li>
+			<li><a href="javascript:select(1,'soundboard','%2Fprojects%2Fsoundboard%2Findex.html');">soundboard</a></li>
+			<li><a href="javascript:select(1,'stack','%2Fprojects%2Fstack%2Findex.html');">stack</a></li>
+			<li><a href="javascript:select(1,'stack-bump-3d','%2Fprojects%2Fstack-bump-3d%2Findex.html');">stack-bump-3d</a></li>
+			<li><a href="javascript:select(1,'superhot','%2Fprojects%2Fsuperhot%2Findex.html');">superhot</a></li>
+			<li><a href="javascript:select(1,'swerve','%2Fprojects%2Fswerve%2Findex.html');">swerve</a></li>
+			<li><a href="javascript:select(1,'tank-trouble-2','%2Fprojects%2Ftank-trouble-2%2Findex.html');">tank-trouble-2</a></li>
+			<li><a href="javascript:select(1,'tanuki-sunset','%2Fprojects%2Ftanuki-sunset%2Findex.html');">tanuki-sunset</a></li>
+			<li><a href="javascript:select(1,'temple-run-2','%2Fprojects%2Ftemple-run-2%2Findex.html');">temple-run-2</a></li>
+			<li><a href="javascript:select(1,'tetris','%2Fprojects%2Ftetris%2Findex.html');">tetris</a></li>
+			<li><a href="javascript:select(1,'the-lost-ball','%2Fprojects%2Fthe-lost-ball%2Findex.html');">the-lost-ball</a></li>
+			<li><a href="javascript:select(1,'there-is-no-game','%2Fprojects%2Fthere-is-no-game%2Findex.html');">there-is-no-game</a></li>
+			<li><a href="javascript:select(1,'townscaper','%2Fprojects%2Ftownscaper%2Findex.html');">townscaper</a></li>
+			<li><a href="javascript:select(1,'tunnel-rush','%2Fprojects%2Ftunnel-rush%2Findex.html');">tunnel-rush</a></li>
+			<li><a href="javascript:select(1,'tv-static','%2Fprojects%2Ftv-static%2Findex.html');">tv-static</a></li>
+			<li><a href="javascript:select(1,'vex3','%2Fprojects%2Fvex3%2Findex.html');">vex3</a></li>
+			<li><a href="javascript:select(1,'vex4','%2Fprojects%2Fvex4%2Findex.html');">vex4</a></li>
+			<li><a href="javascript:select(1,'vex5','%2Fprojects%2Fvex5%2Findex.html');">vex5</a></li>
+			<li><a href="javascript:select(1,'vex6','%2Fprojects%2Fvex6%2Findex.html');">vex6</a></li>
+			<li><a href="javascript:select(1,'wordle','%2Fprojects%2Fwordle%2Findex.html');">wordle</a></li>
+			<li><a href="javascript:select(1,'zombs-royale','%2Fprojects%2Fzombs-royale%2Findex.html');">zombs-royale</a></li>
+			<li>GAMEBOY ADVANCE GAMES : <span>GAME CONTROLS: D-PAD=ARROW KEYS, B=Z, X=A, L=A, R=S, START=ENTER, AND SELECT=SHIFT.</span></li>
+			<li><select id="sid0"><option value="0">*.github.io</option><option value="4">*.vercel.app</option></select></li>
+			<li><a href="javascript:select(0,'007%20-%20Everything%20Or%20Nothing','%2Flauncher.html%23007');">007 - Everything Or Nothing</a></li>
+			<li><a href="javascript:select(0,'Advance%20Wars','%2Flauncher.html%23advancewars');">Advance Wars</a></li>
+			<li><a href="javascript:select(0,'Advance%20Wars%202','%2Flauncher.html%23advancewars2');">Advance Wars 2</a></li>
+			<li><a href="javascript:select(0,'Aladdin','%2Flauncher.html%23aladdin');">Aladdin</a></li>
+			<li><a href="javascript:select(0,'Alien%20Hominid','%2Flauncher.html%23alienhominid');">Alien Hominid</a></li>
+			<li><a href="javascript:select(0,'Atari%20Anniversary%20Advance','%2Flauncher.html%23atari');">Atari Anniversary Advance</a></li>
+			<li><a href="javascript:select(0,'Bomberman%20Max%202%20-%20Blue%20Advance','%2Flauncher.html%23bomberman_max2blue');">Bomberman Max 2 - Blue Advance</a></li>
+			<li><a href="javascript:select(0,'Bomberman%20Tournament','%2Flauncher.html%23bomberman_tournament');">Bomberman Tournament</a></li>
+			<li><a href="javascript:select(0,'Bubble%20Bobble%3A%20Old%20and%20New','%2Flauncher.html%23bubblebobble');">Bubble Bobble: Old and New</a></li>
+			<li><a href="javascript:select(0,'Connect%20Four%2FPerfection%2FTrouble','%2Flauncher.html%23cfpt');">Connect Four/Perfection/Trouble</a></li>
+			<li><a href="javascript:select(0,'Crash%20Bandicoot%20-%20The%20Huge%20Adventure','%2Flauncher.html%23cbha');">Crash Bandicoot - The Huge Adventure</a></li>
+			<li><a href="javascript:select(0,'Crash%20Bandicoot%20-%20Purple%20Riptos%20Rampage','%2Flauncher.html%23cbprr');">Crash Bandicoot - Purple Riptos Rampage</a></li>
+			<li><a href="javascript:select(0,'Crash%20Bandicoot%202%20-%20N-Tranced','%2Flauncher.html%23cb2');">Crash Bandicoot 2 - N-Tranced</a></li>
+			<li><a href="javascript:select(0,'Crash%20Nitro%20Kart','%2Flauncher.html%23cnk');">Crash Nitro Kart</a></li>
+			<li><a href="javascript:select(0,'Croket!%20-%20Yume%20no%20Banker%20Survival!','%2Flauncher.html%23croket1');">Croket! - Yume no Banker Survival!</a></li>
+			<li><a href="javascript:select(0,'Croket!%202%20-%20Yami%20no%20Bank%20to%20Banqueen','%2Flauncher.html%23croket2');">Croket! 2 - Yami no Bank to Banqueen</a></li>
+			<li><a href="javascript:select(0,'Croket!%203%20-%20Granu%20Oukoku%20no%20Nazo','%2Flauncher.html%23croket3');">Croket! 3 - Granu Oukoku no Nazo</a></li>
+			<li><a href="javascript:select(0,'Croket!%204%20-%20Bank%20no%20Mori%20no%20Mamorigami','%2Flauncher.html%23croket4');">Croket! 4 - Bank no Mori no Mamorigami</a></li>
+			<li><a href="javascript:select(0,'Digimon%20Racing','%2Flauncher.html%23digimon_racing');">Digimon Racing</a></li>
+			<li><a href="javascript:select(0,'DK%20-%20King%20Of%20Swing','%2Flauncher.html%23dkkos');">DK - King Of Swing</a></li>
+			<li><a href="javascript:select(0,'Donkey%20Kong%20Country','%2Flauncher.html%23dkc');">Donkey Kong Country</a></li>
+			<li><a href="javascript:select(0,'Donkey%20Kong%20Country%202','%2Flauncher.html%23dkc2');">Donkey Kong Country 2</a></li>
+			<li><a href="javascript:select(0,'Donkey%20Kong%20Country%203','%2Flauncher.html%23dkc3');">Donkey Kong Country 3</a></li>
+			<li><a href="javascript:select(0,'Doom','%2Flauncher.html%23dm');">Doom</a></li>
+			<li><a href="javascript:select(0,'Doom%202','%2Flauncher.html%23dm2');">Doom 2</a></li>
+			<li><a href="javascript:select(0,'Dragon%20Ball%20Z%20-%20Supersonic%20Warriors','%2Flauncher.html%23dbz_supersonic');">Dragon Ball Z - Supersonic Warriors</a></li>
+			<li><a href="javascript:select(0,'Dr.%20Mario%2BPuzzle%20League','%2Flauncher.html%23dmpl');">Dr. Mario+Puzzle League</a></li>
+			<li><a href="javascript:select(0,'Drill%20Dozer','%2Flauncher.html%23drilldozer');">Drill Dozer</a></li>
+			<li><a href="javascript:select(0,'Duke%20Nukem%20Advance','%2Flauncher.html%23dna');">Duke Nukem Advance</a></li>
+			<li><a href="javascript:select(0,'Dungeons%20And%20Dragons%20-%20Eye%20Of%20The%20Beholder','%2Flauncher.html%23dnd');">Dungeons And Dragons - Eye Of The Beholder</a></li>
+			<li><a href="javascript:select(0,'Earthworm%20Jim','%2Flauncher.html%23earthwormjim');">Earthworm Jim</a></li>
+			<li><a href="javascript:select(0,'Earthworm%20Jim%202','%2Flauncher.html%23earthwormjim2');">Earthworm Jim 2</a></li>
+			<li><a href="javascript:select(0,'Family%20Feud','%2Flauncher.html%23ffeud');">Family Feud</a></li>
+			<li><a href="javascript:select(0,'Fantastic%204','%2Flauncher.html%23fan4');">Fantastic 4</a></li>
+			<li><a href="javascript:select(0,'Fantastic%204%20-%20Flame%20On','%2Flauncher.html%23fan4fo');">Fantastic 4 - Flame On</a></li>
+			<li><a href="javascript:select(0,'FIFA%20Football%202004','%2Flauncher.html%23fifa4');">FIFA Football 2004</a></li>
+			<li><a href="javascript:select(0,'FIFA%20Football%202005','%2Flauncher.html%23fifa5');">FIFA Football 2005</a></li>
+			<li><a href="javascript:select(0,'FIFA%2006','%2Flauncher.html%23fifa6');">FIFA 06</a></li>
+			<li><a href="javascript:select(0,'FIFA%20World%20Cup%202006','%2Flauncher.html%23fifawc6');">FIFA World Cup 2006</a></li>
+			<li><a href="javascript:select(0,'FIFA%202007','%2Flauncher.html%23fifa7');">FIFA 2007</a></li>
+			<li><a href="javascript:select(0,'Final%20Fantasy%201%20%26amp%3B%202%20Advance','%2Flauncher.html%23ff1and2');">Final Fantasy 1 &amp; 2 Advance</a></li>
+			<li><a href="javascript:select(0,'Final%20Fantasy%20IV%20Advance%20(Sound%20Restoration%20Mod)','%2Flauncher.html%23ff4S');">Final Fantasy IV Advance (Sound Restoration Mod)</a></li>
+			<li><a href="javascript:select(0,'Final%20Fantasy%20VI%20Advance','%2Flauncher.html%23ff6');">Final Fantasy VI Advance</a></li>
+			<li><a href="javascript:select(0,'Final%20Fantasy%20Tactics%20Advance','%2Flauncher.html%23final_fantasy_tactics');">Final Fantasy Tactics Advance</a></li>
+			<li><a href="javascript:select(0,'Fire%20Emblem','%2Flauncher.html%23fire_emblem');">Fire Emblem</a></li>
+			<li><a href="javascript:select(0,'Ford%20Racing%203','%2Flauncher.html%23fr3');">Ford Racing 3</a></li>
+			<li><a href="javascript:select(0,'Frogger%20Advance%20-%20The%20Great%20Quest','%2Flauncher.html%23frogger1');">Frogger Advance - The Great Quest</a></li>
+			<li><a href="javascript:select(0,'Frogger's%20Adventures%20-%20Temple%20of%20the%20Frog','%2Flauncher.html%23frogger2');">Frogger's Adventures - Temple of the Frog</a></li>
+			<li><a href="javascript:select(0,'Frogger's%20Adventures%202%20-%20The%20Lost%20Wand','%2Flauncher.html%23frogger3');">Frogger's Adventures 2 - The Lost Wand</a></li>
+			<li><a href="javascript:select(0,'F-Zero%20-%20GP%20Legend','%2Flauncher.html%23fzero_gp');">F-Zero - GP Legend</a></li>
+			<li><a href="javascript:select(0,'F-Zero%20-%20Maximum%20Velocity','%2Flauncher.html%23fzero_max');">F-Zero - Maximum Velocity</a></li>
+			<li><a href="javascript:select(0,'Game%20%26amp%3B%20Watch%20Gallery%204','%2Flauncher.html%23gamewatch4');">Game &amp; Watch Gallery 4</a></li>
+			<li><a href="javascript:select(0,'Golden%20Sun','%2Flauncher.html%23goldensun');">Golden Sun</a></li>
+			<li><a href="javascript:select(0,'Grand%20Theft%20Auto%20Advance','%2Flauncher.html%23gta');">Grand Theft Auto Advance</a></li>
+			<li><a href="javascript:select(0,'Gunstar%20Super%20Heroes','%2Flauncher.html%23gunstar_super_heroes');">Gunstar Super Heroes</a></li>
+			<li><a href="javascript:select(0,'Hamtaro%20-%20Ham-Ham%20Heartbreak','%2Flauncher.html%23hamtaro_heartbreak');">Hamtaro - Ham-Ham Heartbreak</a></li>
+			<li><a href="javascript:select(0,'Harvest%20Moon%20-%20Friends%20Of%20Mineral%20Town','%2Flauncher.html%23hmfmt');">Harvest Moon - Friends Of Mineral Town</a></li>
+			<li><a href="javascript:select(0,'Harvest%20Moon%20-%20More%20Friends%20Of%20Mineral%20Town','%2Flauncher.html%23hmmfmt');">Harvest Moon - More Friends Of Mineral Town</a></li>
+			<li><a href="javascript:select(0,'Iridion%203D','%2Flauncher.html%23iridion');">Iridion 3D</a></li>
+			<li><a href="javascript:select(0,'Jackie%20Chan%20Adventures%20-%20Legend%20Of%20The%20Dark%20Hand','%2Flauncher.html%23jca');">Jackie Chan Adventures - Legend Of The Dark Hand</a></li>
+			<li><a href="javascript:select(0,'James%20Bond%20007%20-%20Nightfire','%2Flauncher.html%23jbn');">James Bond 007 - Nightfire</a></li>
+			<li><a href="javascript:select(0,'Jurassic%20Park%20III%20-%20DNA%20Factor','%2Flauncher.html%23jp3dna');">Jurassic Park III - DNA Factor</a></li>
+			<li><a href="javascript:select(0,'Jurassic%20Park%20III%20-%20Island%20Attack','%2Flauncher.html%23jp3ia');">Jurassic Park III - Island Attack</a></li>
+			<li><a href="javascript:select(0,'Jurassic%20Park%20III%20-%20Park%20Builder','%2Flauncher.html%23jp3pb');">Jurassic Park III - Park Builder</a></li>
+			<li><a href="javascript:select(0,'Justice%20League%20-%20Injustice%20For%20All','%2Flauncher.html%23jlifa');">Justice League - Injustice For All</a></li>
+			<li><a href="javascript:select(0,'Justice%20League%20Chronicles','%2Flauncher.html%23jlc');">Justice League Chronicles</a></li>
+			<li><a href="javascript:select(0,'Justice%20League%20Heros%20-%20The%20Flash','%2Flauncher.html%23jlhth');">Justice League Heros - The Flash</a></li>
+			<li><a href="javascript:select(0,'Kingdom%20Hearts%20-%20Chain%20Of%20Memories','%2Flauncher.html%23khcom');">Kingdom Hearts - Chain Of Memories</a></li>
+			<li><a href="javascript:select(0,'Kirby%20%26amp%3B%20The%20Amazing%20Mirror','%2Flauncher.html%23kirbymirror');">Kirby &amp; The Amazing Mirror</a></li>
+			<li><a href="javascript:select(0,'Kirby%3A%20Nightmare%20in%20Dreamland','%2Flauncher.html%23kirbynightmare');">Kirby: Nightmare in Dreamland</a></li>
+			<li><a href="javascript:select(0,'Lego%20Bionicle','%2Flauncher.html%23lb');">Lego Bionicle</a></li>
+			<li><a href="javascript:select(0,'Lego%20Island%202','%2Flauncher.html%23li2');">Lego Island 2</a></li>
+			<li><a href="javascript:select(0,'Lego%20Racers%202','%2Flauncher.html%23lr2');">Lego Racers 2</a></li>
+			<li><a href="javascript:select(0,'Lego%20Star%20Wars','%2Flauncher.html%23lsw');">Lego Star Wars</a></li>
+			<li><a href="javascript:select(0,'Lord%20Of%20The%20Rings%3A%20The%20Third%20Age','%2Flauncher.html%23lotrtta');">Lord Of The Rings: The Third Age</a></li>
+			<li><a href="javascript:select(0,'Lord%20Of%20The%20Rings%3A%20The%20Two%20Towers','%2Flauncher.html%23lotr2');">Lord Of The Rings: The Two Towers</a></li>
+			<li><a href="javascript:select(0,'Lord%20Of%20The%20Rings%3A%20The%20Return%20Of%20The%20King','%2Flauncher.html%23lotr3');">Lord Of The Rings: The Return Of The King</a></li>
+			<li><a href="javascript:select(0,'Mario%20%26amp%3B%20Luigi%3A%20Superstar%20Saga','%2Flauncher.html%23superstar');">Mario &amp; Luigi: Superstar Saga</a></li>
+			<li><a href="javascript:select(0,'Mario%20Kart%3A%20Super%20Circuit','%2Flauncher.html%23mariokart');">Mario Kart: Super Circuit</a></li>
+			<li><a href="javascript:select(0,'Mario%20Party%20Advance','%2Flauncher.html%23marioparty');">Mario Party Advance</a></li>
+			<li><a href="javascript:select(0,'Mario%20Pinball%20Land','%2Flauncher.html%23mariopinball');">Mario Pinball Land</a></li>
+			<li><a href="javascript:select(0,'Mario%20V.S.%20Donkey%20Kong','%2Flauncher.html%23mvsdk');">Mario V.S. Donkey Kong</a></li>
+			<li><a href="javascript:select(0,'Megaman%20%26amp%3B%20Bass','%2Flauncher.html%23megamanbass');">Megaman &amp; Bass</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%201','%2Flauncher.html%23megaman_battle1');">Megaman Battle Network 1</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%202','%2Flauncher.html%23megaman_battle2');">Megaman Battle Network 2</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%203%20Blue','%2Flauncher.html%23megaman_battle3_blue');">Megaman Battle Network 3 Blue</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%204%20Blue%20Moon','%2Flauncher.html%23megaman_battle4_blue');">Megaman Battle Network 4 Blue Moon</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%204%20Red%20Sun','%2Flauncher.html%23megaman_battle4_red');">Megaman Battle Network 4 Red Sun</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%205%20Team%20Protoman','%2Flauncher.html%23megaman_battle5');">Megaman Battle Network 5 Team Protoman</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Battle%20Network%206%20Cybeast%20Falzar','%2Flauncher.html%23megaman_battle6');">Megaman Battle Network 6 Cybeast Falzar</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Zero','%2Flauncher.html%23megaman_zero1');">Megaman Zero</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Zero%202','%2Flauncher.html%23megaman_zero2');">Megaman Zero 2</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Zero%203','%2Flauncher.html%23megaman_zero3');">Megaman Zero 3</a></li>
+			<li><a href="javascript:select(0,'Megaman%20Zero%204','%2Flauncher.html%23megaman_zero4');">Megaman Zero 4</a></li>
+			<li><a href="javascript:select(0,'Metal%20Slug%20Advance','%2Flauncher.html%23metalslug');">Metal Slug Advance</a></li>
+			<li><a href="javascript:select(0,'Metroid%20Fusion','%2Flauncher.html%23metroid_fusion');">Metroid Fusion</a></li>
+			<li><a href="javascript:select(0,'Metroid%20Zero%20Mission','%2Flauncher.html%23mzm');">Metroid Zero Mission</a></li>
+			<li><a href="javascript:select(0,'Momotarou%20Dentetsu%20G%20Gold%20Deck%20wo%20Tsukure!','%2Flauncher.html%23momotarou_dentetsu');">Momotarou Dentetsu G Gold Deck wo Tsukure!</a></li>
+			<li><a href="javascript:select(0,'Monopoly','%2Flauncher.html%23monopoly');">Monopoly</a></li>
+			<li><a href="javascript:select(0,'Monster%20Force','%2Flauncher.html%23monster_force');">Monster Force</a></li>
+			<li><a href="javascript:select(0,'Mortal%20Kombat%20Advance','%2Flauncher.html%23mortal_kombat');">Mortal Kombat Advance</a></li>
+			<li><a href="javascript:select(0,'Mother%203','%2Flauncher.html%23m3');">Mother 3</a></li>
+			<li><a href="javascript:select(0,'NBA%20Jam%202002','%2Flauncher.html%23nbaj');">NBA Jam 2002</a></li>
+			<li><a href="javascript:select(0,'Need%20For%20Speed%20-%20Underground','%2Flauncher.html%23nfsu');">Need For Speed - Underground</a></li>
+			<li><a href="javascript:select(0,'Need%20For%20Speed%20-%20Underground%202','%2Flauncher.html%23nfsu2');">Need For Speed - Underground 2</a></li>
+			<li><a href="javascript:select(0,'One%20Piece','%2Flauncher.html%23onepiece');">One Piece</a></li>
+			<li><a href="javascript:select(0,'Pacman%20Collection','%2Flauncher.html%23pmc');">Pacman Collection</a></li>
+			<li><a href="javascript:select(0,'Pacman%20Pinball%20Advance','%2Flauncher.html%23pmpa');">Pacman Pinball Advance</a></li>
+			<li><a href="javascript:select(0,'Pacman%20World','%2Flauncher.html%23pacman_world');">Pacman World</a></li>
+			<li><a href="javascript:select(0,'Pacman%20World%202','%2Flauncher.html%23pacman_world2');">Pacman World 2</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Emerald','%2Flauncher.html%23pokemonemerald');">Pokemon Emerald</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Emerald%20(Kaizo%20Mod)','%2Flauncher.html%23pokemonek');">Pokemon Emerald (Kaizo Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Emerald%20(Party%20Randomizer%20Plus%20Mod)','%2Flauncher.html%23eprp');">Pokemon Emerald (Party Randomizer Plus Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Flora%20Sky%20(Emerald%20Mod)','%2Flauncher.html%23pokemonflorasky');">Pokemon Flora Sky (Emerald Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Leaf%20Green','%2Flauncher.html%23pokemongreen');">Pokemon Leaf Green</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Fire%20Red','%2Flauncher.html%23pokemonred');">Pokemon Fire Red</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Gaia%20(Fire%20Red%20Mod)','%2Flauncher.html%23gaia');">Pokemon Gaia (Fire Red Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Rocket%20Strike%20(Fire%20Red%20Mod)','%2Flauncher.html%23prs');">Pokemon Rocket Strike (Fire Red Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Water%20Blue%20(Fire%20Red%20Mod)','%2Flauncher.html%23pokewb');">Pokemon Water Blue (Fire Red Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Mystery%20Dungeon%20Red','%2Flauncher.html%23mysteryred');">Pokemon Mystery Dungeon Red</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Ruby','%2Flauncher.html%23pokemonruby');">Pokemon Ruby</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Light%20Platinum%20(Ruby%20Mod)','%2Flauncher.html%23pokemonlp');">Pokemon Light Platinum (Ruby Mod)</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Sapphire','%2Flauncher.html%23pokemonsapphire');">Pokemon Sapphire</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Pinball%20-%20Ruby%20%26%20Sapphire','%2Flauncher.html%23pprs');">Pokemon Pinball - Ruby & Sapphire</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Video%20Show%20Pak%201','%2Flauncher.html%23gba_video_pokemon_1');">Pokemon Video Show Pak 1</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Video%20Show%20Pak%202','%2Flauncher.html%23gba_video_pokemon_2');">Pokemon Video Show Pak 2</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Video%20Show%20Pak%203','%2Flauncher.html%23gba_video_pokemon_3');">Pokemon Video Show Pak 3</a></li>
+			<li><a href="javascript:select(0,'Pokemon%20Video%20Show%20Pak%204','%2Flauncher.html%23gba_video_pokemon_4');">Pokemon Video Show Pak 4</a></li>
+			<li><a href="javascript:select(0,'Puyo%20Pop','%2Flauncher.html%23puyopop');">Puyo Pop</a></li>
+			<li><a href="javascript:select(0,'Puyo%20Pop%20Fever','%2Flauncher.html%23ppf');">Puyo Pop Fever</a></li>
+			<li><a href="javascript:select(0,'Rainbow%20Six%20-%20Rogue%20Spear','%2Flauncher.html%23rsrs');">Rainbow Six - Rogue Spear</a></li>
+			<li><a href="javascript:select(0,'Rayman%203%20-%20Hoodlum%20Havoc','%2Flauncher.html%23r3hh');">Rayman 3 - Hoodlum Havoc</a></li>
+			<li><a href="javascript:select(0,'Rayman%20Advance','%2Flauncher.html%23ra');">Rayman Advance</a></li>
+			<li><a href="javascript:select(0,'Rivera%20-%20The%20Promised%20Land','%2Flauncher.html%23rtpl');">Rivera - The Promised Land</a></li>
+			<li><a href="javascript:select(0,'Sega%20Arcade%20Gallery','%2Flauncher.html%23sag');">Sega Arcade Gallery</a></li>
+			<li><a href="javascript:select(0,'Sim%20City%202000','%2Flauncher.html%23sc');">Sim City 2000</a></li>
+			<li><a href="javascript:select(0,'Sonic%20Advance','%2Flauncher.html%23sonic_advance');">Sonic Advance</a></li>
+			<li><a href="javascript:select(0,'Sonic%20Advance%202','%2Flauncher.html%23sonic_advance2');">Sonic Advance 2</a></li>
+			<li><a href="javascript:select(0,'Sonic%20Advance%203','%2Flauncher.html%23sonic_advance3');">Sonic Advance 3</a></li>
+			<li><a href="javascript:select(0,'Sonic%20Battle','%2Flauncher.html%23sonicbattle');">Sonic Battle</a></li>
+			<li><a href="javascript:select(0,'Sonic%20Pinball','%2Flauncher.html%23sonicpinball');">Sonic Pinball</a></li>
+			<li><a href="javascript:select(0,'Sonic%20The%20Hedgehog%20-%20Genesis','%2Flauncher.html%23sthg');">Sonic The Hedgehog - Genesis</a></li>
+			<li><a href="javascript:select(0,'Spyro%20Adventure','%2Flauncher.html%23spyro_adventure');">Spyro Adventure</a></li>
+			<li><a href="javascript:select(0,'Spyro%3A%20Season%20of%20Ice','%2Flauncher.html%23spyro_ice');">Spyro: Season of Ice</a></li>
+			<li><a href="javascript:select(0,'Spyro%202%3A%20Season%20of%20Flame','%2Flauncher.html%23spyro_flame');">Spyro 2: Season of Flame</a></li>
+			<li><a href="javascript:select(0,'Super%20Mario%20Advance','%2Flauncher.html%23supermarioadvance');">Super Mario Advance</a></li>
+			<li><a href="javascript:select(0,'Super%20Mario%20Advance%202','%2Flauncher.html%23supermarioadvance2');">Super Mario Advance 2</a></li>
+			<li><a href="javascript:select(0,'Super%20Mario%20Advance%203','%2Flauncher.html%23supermarioadvance3');">Super Mario Advance 3</a></li>
+			<li><a href="javascript:select(0,'Super%20Mario%20Advance%204','%2Flauncher.html%23supermarioadvance4');">Super Mario Advance 4</a></li>
+			<li><a href="javascript:select(0,'Super%20Mario%20Advance%204%20(Wii%20U%20Version)','%2Flauncher.html%23sma4%2B');">Super Mario Advance 4 (Wii U Version)</a></li>
+			<li><a href="javascript:select(0,'Super%20Monkey%20Ball%20Jr','%2Flauncher.html%23supermonkeyballjr');">Super Monkey Ball Jr</a></li>
+			<li><a href="javascript:select(0,'Super%20Street%20Fighter%20II%3A%20Turbo%20Revival','%2Flauncher.html%23super_street_fighter_2_turbo_revival');">Super Street Fighter II: Turbo Revival</a></li>
+			<li><a href="javascript:select(0,'Super%20Street%20Fighter%20III%3A%20Alpha','%2Flauncher.html%23super_street_fighter_3_alpha');">Super Street Fighter III: Alpha</a></li>
+			<li><a href="javascript:select(0,'Tales%20of%20Phantasia','%2Flauncher.html%23tales_of_phantasia');">Tales of Phantasia</a></li>
+			<li><a href="javascript:select(0,'Tak%202%3A%20The%20Staff%20of%20Dreams','%2Flauncher.html%23tak2_staff_of_dreams');">Tak 2: The Staff of Dreams</a></li>
+			<li><a href="javascript:select(0,'Teenage%20Mutant%20Ninja%20Turtles','%2Flauncher.html%23tmnt');">Teenage Mutant Ninja Turtles</a></li>
+			<li><a href="javascript:select(0,'Tetris%20Worlds','%2Flauncher.html%23tetris_worlds');">Tetris Worlds</a></li>
+			<li><a href="javascript:select(0,'The%20Game%20Of%20Life%2FYahtzee%2FPayday','%2Flauncher.html%23lyp');">The Game Of Life/Yahtzee/Payday</a></li>
+			<li><a href="javascript:select(0,'The%20Sims%3A%20Bustin%20%26%2339%3B%20Out','%2Flauncher.html%23sims_bustin_out');">The Sims: Bustin &#39; Out</a></li>
+			<li><a href="javascript:select(0,'The%20Sims%202','%2Flauncher.html%23sims2');">The Sims 2</a></li>
+			<li><a href="javascript:select(0,'The%20Simpsons%3A%20Road%20Rage','%2Flauncher.html%23simpsons');">The Simpsons: Road Rage</a></li>
+			<li><a href="javascript:select(0,'Tony%20Hawk's%20American%20Sk8land','%2Flauncher.html%23thas');">Tony Hawk's American Sk8land</a></li>
+			<li><a href="javascript:select(0,'Tony%20Hawk's%20Pro%20Skater%202','%2Flauncher.html%23thps2');">Tony Hawk's Pro Skater 2</a></li>
+			<li><a href="javascript:select(0,'Tony%20Hawk's%20Pro%20Skater%203','%2Flauncher.html%23thps3');">Tony Hawk's Pro Skater 3</a></li>
+			<li><a href="javascript:select(0,'Tony%20Hawk's%20Pro%20Skater%204','%2Flauncher.html%23thps4');">Tony Hawk's Pro Skater 4</a></li>
+			<li><a href="javascript:select(0,'Top%20Gear%20GT%20Championship','%2Flauncher.html%23tggtc');">Top Gear GT Championship</a></li>
+			<li><a href="javascript:select(0,'Top%20Gear%20Rally','%2Flauncher.html%23tgr');">Top Gear Rally</a></li>
+			<li><a href="javascript:select(0,'Turok%20Evolution','%2Flauncher.html%23turok_evolution');">Turok Evolution</a></li>
+			<li><a href="javascript:select(0,'Ty%20the%20Tasmanian%20Tiger%202%20-%20Bush%20Rescue','%2Flauncher.html%23ty2');">Ty the Tasmanian Tiger 2 - Bush Rescue</a></li>
+			<li><a href="javascript:select(0,'Ty%20the%20Tasmanian%20Tiger%203%20-%20Night%20of%20the%20Quinkan','%2Flauncher.html%23ty3');">Ty the Tasmanian Tiger 3 - Night of the Quinkan</a></li>
+			<li><a href="javascript:select(0,'Uno%2BSkip-Bo','%2Flauncher.html%23unsb');">Uno+Skip-Bo</a></li>
+			<li><a href="javascript:select(0,'Wario%20Land%204','%2Flauncher.html%23warioland4');">Wario Land 4</a></li>
+			<li><a href="javascript:select(0,'Wario%20Ware%20Inc','%2Flauncher.html%23wario_ware');">Wario Ware Inc</a></li>
+			<li><a href="javascript:select(0,'Yggdra%20Union%20-%20We'll%20Never%20Fight%20Alone','%2Flauncher.html%23ynfa');">Yggdra Union - We'll Never Fight Alone</a></li>
+			<li><a href="javascript:select(0,'The%20Legend%20of%20Zelda%3A%20A%20Link%20to%20the%20Past','%2Flauncher.html%23zelda_past');">The Legend of Zelda: A Link to the Past</a></li>
+			<li><a href="javascript:select(0,'The%20Legend%20of%20Zelda%3A%20The%20Minish%20Cap','%2Flauncher.html%23zelda_minish');">The Legend of Zelda: The Minish Cap</a></li>
+		</ul>
+	</body>
+</html>
