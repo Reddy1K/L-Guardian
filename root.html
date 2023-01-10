@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body{
+				background-color: #000;
+				margin: 0px;
+			}
+			*{
+				color: #000;
+				font-family: arial;
+			}
+			button{
+				background-color: transparent;
+				border: none;
+				display: block;
+				margin-bottom: 5px;
+			}
+			iframe{
+				border: 0px;
+				width: 99vw;
+				height: 98vh;
+			}
+			#imd{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				height: 3vh;
+				display: flex;
+			}
+			#imd>button>.ht{
+				display: none;
+			}
+			#imd>button{
+				cursor: pointer;
+				padding: 0px;
+				border: 0px;
+				margin: 0px;
+				font-size: 14px;
+				box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+				margin-left: 4px;
+				margin-right: 4px;
+				margin-top: 1px;
+				display: flex;
+				transition: all 1s;
+				background-color: #fff;
+				border-radius: 5px;
+				padding-left: 5px;
+				width: 20px;
+				height: 20px;
+			}
+			#imd>button>span{
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			#imd>button:hover{
+				width: 150px;
+			}
+			#imd>button.over:hover{
+				width: 340px;
+			}
+			#imd>button.bump:hover{
+				width: 160px;
+			}
+			#imd>button:hover .ht{
+				display: block;
+			}
+			*{
+				color: #000;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+		<!--<script src="/compiled.js"></script>-->
+		<script>{{COMPILEDJS}}</script>
+		<script>
+			var historyStack = [];
+			var forwardStack = [];
+			function toggleMenu(){
+				console.log("[EVENT] (Menu) {toggled}");
+				var state;
+				if(document.getElementById("imd").style.display == "flex"){
+					state=true;
+				} else {
+					state=false;
+				}
+				if(state){
+					document.getElementById("imd").style.display = "none";
+				} else {
+					document.getElementById("imd").style.display = "flex";
+				}
+			}
+			function accessFile(path){
+				if(window.__files["files"][path]!=undefined){
+					return window.__files["files"][path];
+				} else {
+					return false;
+				}
+			}
+			function prep(h,path){
+				console.log(`[EVENT] (Loader) {loading ${path}}`)
+				const root = new URL(path, "https://example.com");
+				h=h+"";
+				var jm = /<script src=["'](.*?)["']><\/script>/g;
+				var jg = jm.exec(h);
+				while(jg !== null){
+					jg[1]=new URL(jg[1], root.href).href;
+					jg[1]=jg[1].replace("https://example.com","");
+					console.log(`[INFO] (Loader) {replacing ${jg[0]} with ${jg[1]}}`);
+					if(window.__files["files"][jg[1]] != undefined){
+						h=h.replace(jg[0], `<script>${window.__files["files"][jg[1]]}</script\>`);
+					}
+					jg = jm.exec(h);
+				}
+				var cm = /<link.*?href=["'](.*?)["'].*?>/g;
+				var cg = cm.exec(h);
+				while(cg !== null){
+					cg[1]=new URL(cg[1], root.href).href;
+					cg[1]=cg[1].replace("https://example.com","");
+					console.log(`[INFO] (Loader) {replacing ${cg[0]} with ${cg[1]}}`)
+					if(window.__files["files"][cg[1]] != undefined){
+						h=h.replace(cg[0], "<style>"+window.__files["files"][cg[1]]+"</style\>");
+					}
+					cg = cm.exec(h);
+				}
+				var am = /<a.*?href=["'](.*?)["']/g;
+				var ag = am.exec(h);
+				while(ag !== null){
+					if(ag[1].indexOf("http://")==-1&&ag[1].indexOf("https://")==-1&&ag[1].indexOf("javascript:")==-1){
+						const old = ag[1];
+						ag[1]=new URL(ag[1], root.href).href;
+						ag[1]=ag[1].replace("https://example.com",""); 
+						console.log(`[INFO] (Loader) {relinking ${old} to ${ag[1]}}`);
+						ag[1]=encodeURIComponent(ag[1]);
+						if(ag[0].indexOf("'")==-1){
+							h=h.replace(`href="${old}"`, `href="javascript:goInternal('${ag[1]}')"`);
+						} else {
+							h=h.replace(`href='${old}'`, `href="javascript:goInternal('${ag[1]}')'"`);
+						}
+					}
+					ag=am.exec(h);
+				}
+				return h;
+			}
+			async function loadPath(p,s){
+				if(s=="e"){
+					forwardStack=[];
+					historyStack.push(p);
+					console.log(`[EVENT] (History) {history altered with attached stacks}`, historyStack, forwardStack);
+				}
+				if(window.__files["files"][p]!=undefined){
+					document.getElementById("ifd").setAttribute("src", "about:blank");
+					document.getElementById("ifd").onload = function(){
+						document.getElementById("ifd").contentWindow.document.write(prep(window.__files["files"][p], p));
+						document.getElementById("ifd").contentWindow.window.eval(window.__files["files"]["/js/inject.js"]);
+					}
+				} else {
+					document.getElementById("ifd").setAttribute("src", "about:blank");
+					document.getElementById("ifd").onload = function(){
+						document.getElementById("ifd").contentWindow.document.write('<pre style="color:#fff;">404 file is not present in compiled.js</pre>');
+						document.getElementById("ifd").contentWindow.window.eval(window.__files["files"]["/js/inject.js"]);
+					}
+				}
+			}
+			function nodeScriptReplace(node) {
+				if (nodeScriptIs(node) === true) {
+					node.parentNode.replaceChild(nodeScriptClone(node), node);
+				} else {
+					var i = -1,
+						children = node.childNodes;
+					while (++i < children.length) {
+						nodeScriptReplace(children[i]);
+					}
+				}
+
+				return node;
+			}
+			function nodeScriptClone(node) {
+				var script = document.createElement('script');
+				script.text = node.innerHTML;
+
+				var i = -1,
+					attrs = node.attributes,
+					attr;
+				while (++i < attrs.length) {
+					script.setAttribute((attr = attrs[i]).name, attr.value);
+				}
+				return script;
+			}
+
+			function nodeScriptIs(node) {
+				return node.tagName === 'SCRIPT';
+			}
+			window.addEventListener('message', function (e) {
+				const d = e.data;
+				if(d.type=="fetch"){
+					if(accessFile(d.path)!=false){
+						document.getElementById("ifd").contentWindow.postMessage({
+							"type": "callback",
+							"data": accessFile(d.path),
+							"callbackId": d.callbackId
+						}, '*');
+					} else {
+						return "404";
+					}
+				} else if(d.type == "redirect"){
+					d.path=decodeURIComponent(d.path);
+					[d.path, d.query] = d.path.split("?");
+					console.log(`[EVENT] (I2P) {redirecting to ${d.path}}`);
+					if(accessFile(d.path)!=false){
+						if(d.query!=undefined){
+							document.getElementById("ifd").setAttribute("src", "about:blank?"+d.query);
+						} else {
+							document.getElementById("ifd").setAttribute("src", "about:blank");
+						}
+						forwardStack=[];
+						historyStack.push(d.path);
+						console.log(`[EVENT] (History) {history altered with attached stacks}`, historyStack, forwardStack);
+						document.getElementById("ifd").onload = function(){
+							document.getElementById("ifd").contentWindow.document.write(prep(window.__files["files"][d.path], d.path));
+							document.getElementById("ifd").contentWindow.window.eval(window.__files["files"]["/js/inject.js"]);
+						}
+					}
+				} else if(d.type == "rescript"){
+					console.log(`[EVENT] (I2P) {relinking scripts added to page}`);
+					var docc = document.getElementById("ifd").contentWindow.document;
+					var s = docc.getElementsByTagName("script");
+					for(var i=0;i<s.length;i++){
+						var src = s[i].getAttribute("src");
+						if(src!=undefined){if(src[0]!="/") src="/"+src;}
+						console.log(`[INFO] (I2P) {replacing script with src ${src}}`);
+						if(accessFile(src)!=false){
+						   var div = document.createElement("div");
+							div.innerHTML = "<script>"+accessFile(src)+"</script\>";
+							s[i].replaceWith(div.children[0]);
+							nodeScriptReplace(s[i]);
+						}
+					}
+					var a = docc.getElementsByTagName("a");
+					for(var i=0;i<a.length;i++){
+						var p = a[i].getAttribute("href");
+						if(p==null) continue;
+						if(p.indexOf("http://")==-1&&p.indexOf("https://")==-1&&p.indexOf("javascript:")==-1){
+							var root = new URL(historyStack[historyStack.length-1], "https://example.com");
+							p = new URL(p, root.href).href;
+							p=p.replace("https://example.com", "");
+							p=encodeURIComponent(p);
+							a[i].setAttribute("href", `javascript:goInternal('${p}')`);
+						}
+					}
+				} else if(d.type == "esckey"){
+					if(esct){
+						toggleMenu();
+					} else {
+						esct=true;
+						setTimeout(function(){
+							esct=false;
+						}, 500)
+					}
+				}
+			});
+			function buttonHandler(b){
+				if(b==0){
+					if(historyStack.length>1){
+						var p = historyStack.pop();
+						loadPath(historyStack[historyStack.length-1],"b");
+						forwardStack.push(p);
+					}
+				} else if(b==1) {
+					var p = historyStack[historyStack.length-1];
+					loadPath(p,"b");
+				} else if(b==2){
+					if(forwardStack.length>0){
+						var p = forwardStack.pop();
+						loadPath(p,"b");
+						historyStack.push(p);
+					}
+				} else if(b==3){
+					toggleMenu();
+				}
+			}
+			var esct = false;
+			window.addEventListener("keyup", function(e){
+				if(e.key == "Escape"){
+					if(esct){
+						toggleMenu();
+					} else {
+						esct=true;
+						setTimeout(function(){
+							esct=false;
+						}, 500)
+					}
+				}
+			});
+			function init(){ loadPath("/index.html", "e"); }
+			setTimeout(init, 1000);
+		</script>
+	</head>
+	<body>
+		<div id="imd">
+			<button onclick="buttonHandler(0)"><span class="st">🡨</span><span class="ht">&nbsp;go back a page</span></button>
+			<button onclick="buttonHandler(1)" class="bump"><span class="st">⟲</span><span class="ht">&nbsp;reload current page</span></button>
+			<button onclick="buttonHandler(2)"><span class="st">🡪</span><span class="ht">&nbsp;go forward a page</span></button>
+			<button onclick="buttonHandler(3)" class="bump"><span class="st">🡬</span><span class="ht">&nbsp;hit esc twice to exit</span></button>
+			<button class="over"><span class="st">🡦</span><span class="ht">&nbsp;enter custom urlpath&nbsp;<input type="text" id="curlin"></span></button>
+			<script>document.getElementById("imd").style.display = "flex";document.getElementById("curlin").addEventListener("keyup", function(e){
+				if(e.code=="Enter"){
+					loadPath(document.getElementById("curlin").value,"e");
+				}
+			});</script>
+      </div>
+		<iframe id="ifd"></iframe>
+	</body>
+</html>
